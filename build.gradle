@@ -11,9 +11,8 @@ buildscript {
 
 		classpath "org.gebish:geb-core:2.0"
 
-		classpath "info.cukes:cucumber-groovy:1.2.5"
-		classpath 'org.gebish:geb-gradle:2.0'
-	}
+        classpath 'org.gebish:geb-gradle:2.0'
+    }
 }
 
 ext {
@@ -97,7 +96,7 @@ tasks.withType(Test) {
 					"webdriver.gecko.driver"    : new File(unzipGeckoDriver.outputs.files.singleFile, geckoDriverFilename).absolutePath,
 					"webdriver.ie.driver"       : new File(unzipIeDriver.outputs.files.singleFile, ieDriverFilename).absolutePath,
 					"geb.cucumber.step.packages": "pages",
-					"geb.env"                   : System.getProperty("geb.browser").toLowerCase(),
+//					"geb.env"                   : System.getProperty("geb.browser").toLowerCase(),
 //					"geb.build.baseUrl"         : System.getProperty("geb.build.baseUrl"),
 //					"envName"                   : System.getProperty("geb.environmemt")
 			])
