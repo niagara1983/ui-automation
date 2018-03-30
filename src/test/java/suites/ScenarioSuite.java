@@ -1,3 +1,5 @@
+package suites;
+
 import courgette.api.CourgetteOptions;
 import courgette.api.CourgetteRunLevel;
 import courgette.api.junit.Courgette;
@@ -11,9 +13,9 @@ import org.junit.runner.RunWith;
 //        rerunFailedScenarios = true,
         showTestOutput = true,
         cucumberOptions = @CucumberOptions(
-                features = "src/cucumber/resources/features",
-                glue = "src/cucumber/resources/steps",
-                tags = {"@regression"},
+                features = "src/test/resources/features",
+                glue = "src/test/groovy/steps",
+                tags = {"@regression", "~@excluded"},
                 plugin = {
                         "pretty",
                         "json:target/cucumber-report/cucumber.json",
