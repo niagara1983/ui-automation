@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         cucumberOptions = @CucumberOptions(
                 features = "src/test/resources/features",
                 glue = "src/test/groovy/steps",
-                tags = {"@regression", "~@excluded"},
+                tags = {"@regression", "not @excluded"},
                 plugin = {
                         "pretty",
                         "json:target/cucumber-report/cucumber.json",

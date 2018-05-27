@@ -9,4 +9,4 @@ BROWSER=$1
 
 #./gradlew runScenarios -Dgeb.browser=${BROWSER}  -Dgeb.environmemt=${ENVIRONMENT}
 #./gradlew runFeatures -Dgeb.browser=${BROWSER}  -Dgeb.environmemt=${ENVIRONMENT}
-./gradlew runFeatures -Dgeb.browser=${BROWSER}
+./gradlew runFeatures -Dgeb.browser=${BROWSER} --stacktrace
