@@ -61,11 +61,16 @@ dependencies {
 	testCompile "org.seleniumhq.selenium:selenium-api:$seleniumVersion"
 
 
-	testCompile group: 'io.cucumber', name: 'cucumber-groovy', version: '2.0.1'
-
-
 	//courgette
-	testCompile 'io.github.prashant-ramcharan:courgette-jvm:2.4.0'
+	testCompile ('io.github.prashant-ramcharan:courgette-jvm:2.4.0') {
+		exclude group: 'io.cucumber'
+	}
+
+	testCompile 'io.cucumber:cucumber-core:2.4.0'
+	testCompile 'io.cucumber:cucumber-java:2.4.0'
+	testCompile 'io.cucumber:cucumber-junit:2.4.0'
+
+	testCompile group: 'io.cucumber', name: 'cucumber-groovy', version: '2.0.1'
 
 	// https://mvnrepository.com/artifact/org.apache.poi/poi
 	compile group: 'org.apache.poi', name: 'poi', version: '3.17'
